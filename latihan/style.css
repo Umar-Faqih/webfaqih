@@ -73,6 +73,7 @@ span {
   position: absolute;
   top: 300px;
   bottom: 10px;
+  border-radius: 15%;
   height: 30%;
   left: 50%;
   transform: translateX(-50%);

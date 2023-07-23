@@ -22,7 +22,7 @@ html {
 }
 .pesan p {
   position: absolute;
-  top: 1100px;
+  top: 1200px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 700px;
@@ -45,7 +45,7 @@ span {
 
 .moving-text-container {
   position: absolute;
-  top: 850px;
+  top: 900px;
   left: 50%;
   color: aliceblue;
   transform: translate(-50%, -50%);

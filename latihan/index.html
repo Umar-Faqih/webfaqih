@@ -1,49 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
   <head>
-    <title>Ulang Tahun</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulang Tahun Sayang</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .container {
+        position: relative;
+        z-index: 2;
+        padding: 50px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .birthday-wish h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .birthday-wish span {
+        display: block;
+        font-size: 2rem;
+        color: aqua;
+        margin-top: 10px;
+      }
+
+      .moving-text-container {
+        margin: 30px 0;
+        overflow: hidden;
+      }
+
+      .moving-text {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        animation: moveText 15s linear infinite;
+      }
+
+      @keyframes moveText {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      .image-container img {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 15px;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      }
+
+      .pesan p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-top: 40px;
+      }
+
+      .pesan span {
+        display: block;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        color: #00ffff;
+      }
+
+      #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .musik {
+        position: fixed;
+        top: 20px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 3;
+        opacity: 0.6;
+      }
+
+      #playButton {
+        left: 20px;
+        background-image: url('img/true.png');
+      }
+
+      #playButton2 {
+        left: 90px;
+        background-image: url('img/false.png');
+      }
+
+      @media (max-width: 600px) {
+        .birthday-wish h1 {
+          font-size: 1.8rem;
+        }
+
+        .birthday-wish span {
+          font-size: 1.5rem;
+        }
+
+        .pesan p {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
-  <body class="bg">
-    <div class="container">
-      <div class="birthday-wish">
-        <h1>Selamat Ulang Tahun <span>Sayangku 🥰💕💕</br></span> Yang ke-22🎂🥳</h1>
-      </div>
-      <div class="moving-text-container">
-        <div class="moving-text">
-          Semoga panjang dan sehat selalu sayang, dan mimpinya cepat tercapai😘😘💕
-          aamiin😊
-        </div>
-      </div>
-      <div class="image-container">
-        <!-- Foto dengan ukuran width 20px -->
-        <img src="img/ica.jpg" alt="ICA" />
-      </div>
-      <div class="pesan">
-        <p>
-          Sayang terima kasih banyak masih mau bertahan sama aku meskipun sering  bikin kamu kesel dan marah,
-          kamu adalah wanita impian aku sayang aku sangat bersyukur cinta terakhir aku adalah mencintai kamu sayang,
-          aku berharap kamu juga bisa bahagia dalam hubungan kita sayang, dan untuk doanya semoga kamu menjadi wanita yang hebat ya sayang
-          kamu pasti bisa melewati semua ujian sayang meskipun semuanya terasa berat, apapun kondisinya aku bakal terus suport kamu cantikuuu,
-          I LOVE U MOREE 😘😘💕🥰❤️
-          <br /><br /><br />
-          <span>SELAMAT ULANG TAHUN</span><br />
-          <span>ANISA RISKA PRANANTIYANI🎂🥳🥳</span>
-        </p>
-      </div>
-    </div>
+  <body>
     <video autoplay muted loop id="video-background">
       <source src="img/firework.mp4" type="video/mp4" />
-      <!-- Tambahkan sumber video lainnya di sini untuk kompatibilitas -->
     </video>
+
+    <div class="container">
+      <div class="birthday-wish">
+        <h1>Selamat Ulang Tahun <span>Sayangku 🥰💕💕</span>Yang ke-22 🎂🥳</h1>
+      </div>
+
+      <div class="moving-text-container">
+        <div class="moving-text">
+          Semoga panjang umur, sehat selalu sayang, dan mimpinya cepat tercapai 😘💕 Aamiin 😊
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img src="img/ica.jpg" alt="ICA" />
+      </div>
+
+      <div class="pesan">
+        <p>
+          Sayang, terima kasih banyak sudah bertahan sama aku meskipun aku sering bikin kamu kesal dan marah.
+          Kamu adalah wanita impian aku. Aku sangat bersyukur karena cinta terakhirku adalah mencintaimu, sayang.
+          Aku berharap kamu selalu bahagia dalam hubungan kita. Semoga kamu jadi wanita hebat yang kuat hadapi segala hal,
+          walaupun terasa berat. Apa pun yang terjadi, aku akan terus mendukungmu, cantikkuu. <br />
+          I LOVE YOU MORE 😘💕🥰❤️
+        </p>
+        <span>SELAMAT ULANG TAHUN</span>
+        <span>ANISA RISKA PRANANTIYANI 🎂🥳</span>
+      </div>
+    </div>
+
     <button id="playButton" class="musik"></button>
     <button id="playButton2" class="musik"></button>
+
     <audio id="audio">
       <source src="img/lagu.mp3" type="audio/mpeg" />
     </audio>
 
-    <script src="script.js"></script>
+    <script>
+      const playButton = document.getElementById('playButton');
+      const playButton2 = document.getElementById('playButton2');
+      const audio = document.getElementById('audio');
+
+      playButton.addEventListener('click', function () {
+        audio.play();
+      });
+
+      playButton2.addEventListener('click', function () {
+        audio.pause();
+      });
+    </script>
   </body>
 </html>
-
-

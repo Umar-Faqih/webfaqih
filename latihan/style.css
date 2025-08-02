@@ -12,6 +12,16 @@ body, html {
   overflow-x: hidden;
   background-color: black;
 }
+.image-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
 
 /* Background video */
 #video-background {
@@ -81,19 +91,22 @@ body, html {
 
 /* Tombol musik */
 .musik {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  background: #ff69b4 url('img/play.png') no-repeat center center;
-  background-size: 60%;
+  background-image: url('img/play.png');
+  background-size: cover;
   border: none;
   cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-  z-index: 10;
+  z-index: 1000;
 }
+
+.musik.playing {
+  background-image: url('img/pause.png');
+}
+
 
 /* Responsif untuk layar kecil */
 @media (max-width: 600px) {
@@ -119,3 +132,4 @@ body, html {
     font-size: 1rem;
   }
 }
+

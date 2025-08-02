@@ -5,12 +5,13 @@ const playButton = document.getElementById('playButton');
 function toggleMusic() {
   if (audio.paused) {
     audio.play();
-    playButton.style.backgroundImage = "url('img/true.png')";
+    playButton.style.backgroundImage = "url('img/false.png')";
   } else {
     audio.pause();
-    playButton.style.backgroundImage = "url('img/false.png')";
+    playButton.style.backgroundImage = "url('img/true.png')";
   }
 }
 
 // Event listener
 playButton.addEventListener('click', toggleMusic);
+

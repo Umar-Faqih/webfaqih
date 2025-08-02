@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ulang Tahun Sayangku</title>
+    <title>Ulang Tahun Sayang</title>
     <link rel="stylesheet" href="style.css" media="all" />
   </head>
   <body>
-    <button id="playButton" class="musik"></button>
-    <audio id="audio">
-      <source src="img/lagu.mp3" type="audio/mpeg" />
-    </audio>
     <video autoplay muted loop id="video-background">
       <source src="img/firework.mp4" type="video/mp4" />
     </video>
 
-    <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1;">
       <div class="birthday-wish">
         <h1>Selamat Ulang Tahun <span>Sayangku 🥰💕💕</span>Yang ke-22 🎂🥳</h1>
       </div>
@@ -27,7 +23,7 @@
       </div>
 
       <div class="image-container">
-        <img src="img/ica.jpg" alt="ICA" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);" />
+        <img src="img/ica.jpg" alt="ICA" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); object-fit: cover; width: 300px; height: 300px;" />
       </div>
 
       <div class="pesan">
@@ -44,6 +40,7 @@
     </div>
 
     <button id="playButton" class="musik"></button>
+
     <audio id="audio">
       <source src="img/lagu.mp3" type="audio/mpeg" />
     </audio>
@@ -51,5 +48,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-

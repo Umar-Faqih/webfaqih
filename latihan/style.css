@@ -95,7 +95,7 @@ body, html {
   right: 30px;
   width: 60px;
   height: 60px;
-  background-image: url('img/play.png');
+  background-image: url('img/true.png');
   background-size: cover;
   border: none;
   cursor: pointer;
@@ -103,7 +103,7 @@ body, html {
 }
 
 .musik.playing {
-  background-image: url('img/pause.png');
+  background-image: url('img/false.png');
 }
 
 
@@ -131,5 +131,6 @@ body, html {
     font-size: 1rem;
   }
 }
+
 
 

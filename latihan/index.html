@@ -3,136 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ulang Tahun Sayang</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #000;
-        color: #fff;
-      }
-
-      .container {
-        position: relative;
-        z-index: 2;
-        padding: 50px 20px;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .birthday-wish h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-
-      .birthday-wish span {
-        display: block;
-        font-size: 2rem;
-        color: aqua;
-        margin-top: 10px;
-      }
-
-      .moving-text-container {
-        margin: 30px 0;
-        overflow: hidden;
-      }
-
-      .moving-text {
-        font-size: 1.2rem;
-        white-space: nowrap;
-        animation: moveText 15s linear infinite;
-      }
-
-      @keyframes moveText {
-        from {
-          transform: translateX(100%);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
-
-      .image-container img {
-        max-width: 300px;
-        width: 100%;
-        border-radius: 15px;
-        margin: 20px auto;
-        display: block;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-      }
-
-      .pesan p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-top: 40px;
-      }
-
-      .pesan span {
-        display: block;
-        font-weight: bold;
-        font-size: 1.5rem;
-        margin-top: 20px;
-        color: #00ffff;
-      }
-
-      #video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-width: 100vw;
-        min-height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-      }
-
-      .musik {
-        position: fixed;
-        top: 20px;
-        width: 50px;
-        height: 50px;
-        border: none;
-        border-radius: 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: 3;
-        opacity: 0.6;
-      }
-
-      #playButton {
-        left: 20px;
-        background-image: url('img/true.png');
-      }
-
-      #playButton2 {
-        left: 90px;
-        background-image: url('img/false.png');
-      }
-
-      @media (max-width: 600px) {
-        .birthday-wish h1 {
-          font-size: 1.8rem;
-        }
-
-        .birthday-wish span {
-          font-size: 1.5rem;
-        }
-
-        .pesan p {
-          font-size: 1rem;
-        }
-      }
-    </style>
+    <title>Ulang Tahun Sayangku</title>
+    <link rel="stylesheet" href="style.css" media="all" />
   </head>
   <body>
     <video autoplay muted loop id="video-background">
       <source src="img/firework.mp4" type="video/mp4" />
     </video>
 
-    <div class="container">
+    <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
       <div class="birthday-wish">
         <h1>Selamat Ulang Tahun <span>Sayangku 🥰💕💕</span>Yang ke-22 🎂🥳</h1>
       </div>
@@ -144,7 +23,7 @@
       </div>
 
       <div class="image-container">
-        <img src="img/ica.jpg" alt="ICA" />
+        <img src="img/ica.jpg" alt="ICA" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);" />
       </div>
 
       <div class="pesan">
@@ -167,18 +46,6 @@
       <source src="img/lagu.mp3" type="audio/mpeg" />
     </audio>
 
-    <script>
-      const playButton = document.getElementById('playButton');
-      const playButton2 = document.getElementById('playButton2');
-      const audio = document.getElementById('audio');
-
-      playButton.addEventListener('click', function () {
-        audio.play();
-      });
-
-      playButton2.addEventListener('click', function () {
-        audio.pause();
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

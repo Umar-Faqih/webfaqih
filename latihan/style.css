@@ -10,7 +10,6 @@ body, html {
   color: white;
   text-align: center;
   overflow-x: hidden;
-  background-color: black;
 }
 .image-container img {
   width: 250px;
@@ -132,4 +131,5 @@ body, html {
     font-size: 1rem;
   }
 }
+
 

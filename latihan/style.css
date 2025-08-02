@@ -1,123 +1,121 @@
-body,
-html {
-  height: 100%;
+/* Reset dasar */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body, html {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+/* Background video */
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Container utama */
 .container {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.birthday-wish {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  width: 600px;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-.pesan p {
-  position: absolute;
-  top: 1200px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  text-align: center;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
+/* Ucapan ulang tahun */
 .birthday-wish h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
+  margin: 30px 0;
 }
 
-span {
-  color: aqua;
-  font-size: 40px;
+.birthday-wish span {
+  display: block;
+  font-size: 2rem;
+  color: #ffcccc;
+  margin-top: 10px;
 }
 
-.pesan p {
-  font-size: 25px;
+/* Pesan panjang */
+.pesan {
+  margin: 30px 0;
+  font-size: 1.2rem;
+  padding: 0 20px;
+  line-height: 1.6;
 }
 
+/* Teks berjalan */
 .moving-text-container {
-  position: absolute;
-  top: 900px;
-  left: 50%;
-  color: aliceblue;
-  transform: translate(-50%, -50%);
-  width: 700px;
   overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 100%;
 }
 
 .moving-text {
-  font-size: 20px;
-  white-space: nowrap;
-  animation: moveText 15s linear infinite;
+  display: inline-block;
+  padding-left: 100%;
+  animation: slide-left 20s linear infinite;
+  font-size: 1.2rem;
+  color: #ffde59;
 }
 
-@keyframes moveText {
-  from {
-    transform: translateX(100%);
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-100%);
   }
 }
 
-.image-container img {
-  position: absolute;
-  top: 300px;
-  bottom: 10px;
-  border-radius: 10%;
-  height: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 30;
-}
-
-#video-background {
+/* Tombol musik */
+.musik {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ff69b4 url('img/play.png') no-repeat center center;
+  background-size: 60%;
+  border: none;
+  cursor: pointer;
   position: fixed;
-  top: 0;
-  left: -800px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: 100%;
-  z-index: -1;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  z-index: 10;
 }
 
-#playButton {
-  opacity: 30%;
-  position: absolute;
-  top: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-image: url('img/true.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  left: 50px;
-  transform: translateX(-50%);
-  z-index: 30;
-}
-#playButton2 {
-  opacity: 30%;
-  position: absolute;
-  top: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-image: url('img/false.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  left: 130px;
-  transform: translateX(-50%);
-  z-index: 30;
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .birthday-wish h1 {
+    font-size: 1.8rem;
+  }
+
+  .birthday-wish span {
+    font-size: 1.5rem;
+  }
+
+  .pesan p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .musik {
+    width: 50px;
+    height: 50px;
+  }
+
+  .moving-text {
+    font-size: 1rem;
+  }
 }
